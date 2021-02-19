@@ -1,0 +1,2957 @@
+<!DOCTYPE html>
+<html>  
+    
+    <head>   <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+         <title>Instrumentos Técnicos Administrativos</title>
+        <!-- Bootstrap -->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+        <link href="assets/styles.css" rel="stylesheet" media="screen">
+        <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="vendors/flot/excanvas.min.js"></script><![endif]-->
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script src="vendors/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+         <script language="JavaScript">
+function mueveReloj(){
+    momentoActual = new Date()
+    hora = momentoActual.getHours()
+    minuto = momentoActual.getMinutes()
+    segundo = momentoActual.getSeconds()
+
+    horaImprimible = hora + " : " + minuto + " : " + segundo
+
+    document.form_reloj.reloj.value = horaImprimible
+
+    setTimeout("mueveReloj()",1000)
+}
+</script>
+    </head>
+    
+    <body  onload="mueveReloj()">
+         <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                    </a>
+                    
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right">
+                            <li class="dropdown">
+                                <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user"></i> Bienvenido <i class="caret"></i>
+
+                                </a>
+                                <ul class="dropdown-menu">
+                                    
+                                </ul>
+                            </li>
+                        </ul>
+                         <ul class="nav">
+                           
+                            <li class="active">
+                                 <img src="images/gricenter.jfif" width="40px" height="40px">
+                            </li>
+                       
+                        </ul>
+                        <ul class="nav">
+                           
+                            <li class="active">
+                                <a  href="#"><i class="icon-home"></i></a>
+                            </li>
+                       
+                        </ul>
+                        
+                        
+                        
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span3" id="sidebar">
+                    <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse">
+                        <li>
+                            <a href="index.html" ><i class="icon-chevron-right"></i> Inicio</a>
+                        </li> 
+                        <li  >
+                            <a href="form.html"><i class="icon-chevron-right"></i>Administración del conocimiento</a>
+                        </li>
+                        <li >
+                            <a href="form2.html"><i class="icon-chevron-right"></i>Dirección del conocimiento</a>
+                        </li>
+                        <li class="active">
+                            <a href="form3.html"><i class="icon-chevron-right"></i>Liderazgo del conocimiento</a>
+                        </li>
+                        <li>
+                            <a href="form4.html"><i class="icon-chevron-right"></i>Gestión del conocimiento </a>
+                        </li>
+                        <li>
+                            <a href="form5.html"><i class="icon-chevron-right"></i>Gerencia del conocimiento</a>
+                        </li>
+                       
+                                <li>
+                            <a href="tables.php"><i class="icon-chevron-right"></i>Resultados de evaluaciones</a>
+                                    </li>
+                       
+                        
+                    </ul>
+               <form name="form_reloj">
+   <div class="control-group">
+                                        <span class="label label-info">Hora actual</span>
+                                          <div class="controls">
+                                            <input type="text" name="reloj" size="6"> </div>
+                                        </div>
+</form>  
+                </div>
+                <!--/span-->
+                 <div class="span9" id="content">
+                      <!-- morris stacked chart -->
+                    <div class="row-fluid">
+                           <div class="block">
+                            <div class="navbar navbar-inner block-header ">
+                              <div class="muted pull-left">INSTRUMENTO PARA EVALUAR EL LIDERAZGO DEL CONOCIMIENTO </div>
+                            </div>
+                          <form action="calculoherramienta1.3.php" method="post" class="form-horizontal">
+           
+                            <div class="block-content collapse in">
+                                <div class="span12">
+                                    
+                                      <fieldset>
+                                        <legend>Datos Generales</legend>
+                                        <div class="control-group">
+                                          <label class="control-label" for="focusedInput">Nombres:</label>
+                                          <div class="controls">
+                                            <input class="input-xlarge focused" id="focusedInput"  required name="nombre"type="text" value="">
+                                          </div>
+                                        </div>
+                                        <div class="control-group">
+                                          <label class="control-label" for="focusedInput">Apellidos:</label>
+                                          <div class="controls">
+                                            <input class="input-xlarge focused" id="focusedInput" required type="text"  name="apellido" value="">
+                                          </div>
+                                        </div>
+                                      <div class="control-group">
+                                          <label class="control-label" for="focusedInput">Unidad Organica:</label>
+                                          <div class="controls">
+                                            <input class="input-xlarge focused" id="focusedInput" required type="text" name="unidad" value="">
+                                          </div>
+                                        </div>
+                                          <div class="control-group">
+                                          <label class="control-label" for="focusedInput">Cargo Funcional :</label>
+                                          <div class="controls">
+                                            <input class="input-xlarge focused" id="focusedInput"  required type="text"  name="cargo" value="">
+                                          </div>
+                                        </div>
+                                          <div class="control-group">
+                                          <label class="control-label" for="focusedInput">Codigo de empleado :</label>
+                                          <div class="controls">
+                                            <input class="input-xlarge focused" id="focusedInput" required type="text" name="codigo" value="">
+                                          </div>
+                                        </div>
+                                    
+                                      
+                                      </fieldset>
+                                  
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- block -->      
+                                       <!-- wizard -->
+                    <div class="row-fluid section">
+                         <!-- block -->
+                        <div class="block">
+                            <div class="navbar navbar-inner block-header">
+                                <div class="muted pull-left"><img  src="images/gricenter.jfif" width="40px" height="40px">INSTRUMENTO PARA EVALUAR EL LIDERAZGO DEL CONOCIMIENTO EN LA ORGANIZACION </div>
+                            </div>
+                            <div class="block-content collapse in">
+                                <div class="span12">
+                                    <div id="rootwizard">
+                                        
+<!--:::::::::::::::::::::::::::: Pantalla UNO ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+
+    <div class="tab-content">
+                   
+                    <fieldset>
+                    <table class="table table-striped">
+                    <thead>
+                    <tr>
+                      <th>Participativo  </th>
+                        <th>Deficiente</th>
+                        <th>Regular</th>
+                        <th>Bueno</th>
+                        <th>Muy Bueno</th>
+                        <th>Excelente</th>
+                      
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td><p>Es capaz de influenciar en los empleados y delegar tareas a los diferentes integrantes del grupo</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="color" value="1"id="numero1"  onClick="cambio(this.value);" > </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="color" id="numero2" value="2" onClick="cambio(this.value);" > </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="color" id="numero3"  value="3" onClick="cambio(this.value);" > </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="color" id="numero4"  value="4" onClick="cambio(this.value);" > </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="color"  id="numero5" value="5" onClick="cambio(this.value);" > </label>
+                        </td>
+                     
+                    </tr>
+                           <tr>
+                      <td><p>Conoce técnicas para fomentar  la participación de los empleados dentro de la organización</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="color1" value="1"id="numero11"  onClick="cambio1(this.value);" > </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="color1" id="numero22" value="2" onClick="cambio1(this.value);" > </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="color1" id="numero33"  value="3" onClick="cambio1(this.value);" > </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="color1" id="numero44"  value="4" onClick="cambio1(this.value);" > </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="color1"  id="numero55" value="5" onClick="cambio1(this.value);" > </label>
+                        </td>
+                     
+                    </tr>
+                               <tr>
+                      <td><p>Aplica las técnicas de participación para el logro de los objetivos organizacionales</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="color2" value="1"id="numero111"  onClick="cambio2(this.value);" > </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="color2" id="numero222" value="2" onClick="cambio2(this.value);" > </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="color2" id="numero333"  value="3" onClick="cambio2(this.value);" > </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="color2" id="numero444"  value="4" onClick="cambio2(this.value);" > </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="color2"  id="numero555" value="5" onClick="cambio2(this.value);" > </label>
+                        </td>
+                     
+                    </tr>
+                               <tr>
+                      <td><p>Toma en cuenta las aportaciones de los miembros del equipo de trabajo para la toma de decisiones</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="color3" value="1"id="numero1111"  onClick="cambio3(this.value);" > </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="color3" id="numero2222" value="2" onClick="cambio3(this.value);" > </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="color3" id="numero3333"  value="3" onClick="cambio3(this.value);" > </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="color3" id="numero4444"  value="4" onClick="cambio3(this.value);" > </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="color3"  id="numero5555" value="5" onClick="cambio3(this.value);" > </label>
+                        </td>
+                     
+                    </tr>
+                        
+                    </tbody>
+                  </table>
+                                                  </fieldset>
+                                               
+                                           
+        <!--:::::::::::::::::::::::::::: Pantalla Dos ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+              
+                    
+                        <fieldset>
+                        <table class="table table-striped">
+                    <thead>
+                    <tr>
+                      <th>Autoritario </th>
+                        <th>Deficiente</th>
+                        <th>Regular</th>
+                        <th>Bueno</th>
+                        <th>Muy Bueno</th>
+                        <th>Excelente</th>
+                      
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td><p>Aplica estrategias claras con respecto a las actividades desempeñadas en cada área de trabajo</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="colors" value="1"id="numeros1"  onClick="cambios(this.value);" > </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="colors" id="numeros2" value="2" onClick="cambios(this.value);" > </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="colors" id="numeros3"  value="3" onClick="cambios(this.value);" > </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="colors" id="numeros4"  value="4" onClick="cambios(this.value);" > </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="colors"  id="numeros5" value="5" onClick="cambios(this.value);" > </label>
+                        </td>
+                     
+                    </tr>
+                           <tr>
+                      <td><p>Conoce las herramientas y la conducta a implementar en el área de trabajo  </p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="colors1" value="1"id="numeros11"  onClick="cambio11(this.value);" > </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="colors1" id="numeros22" value="2" onClick="cambio11(this.value);" > </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="colors1" id="numeros33"  value="3" onClick="cambio11(this.value);" > </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="colors1" id="numeros44"  value="4" onClick="cambio11(this.value);" > </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="colors1"  id="numeros55" value="5" onClick="cambio11(this.value);" > </label>
+                        </td>
+                     
+                    </tr>
+                               <tr>
+                      <td><p>Aplica sus conocimientos técnicos con base a la experiencia que posee</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="colors2" value="1"id="numeros111"  onClick="cambio22(this.value);" > </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="colors2" id="numeros222" value="2" onClick="cambio22(this.value);" > </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="colors2" id="numeros333"  value="3" onClick="cambio22(this.value);" > </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="colors2" id="numeros444"  value="4" onClick="cambio22(this.value);" > </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="colors2"  id="numeros555" value="5" onClick="cambio22(this.value);" > </label>
+                        </td>
+                     
+                    </tr>
+                               <tr>
+                      <td><p>Toma en cuenta las opiniones y sugerencias de los grupos de trabajo para fortalecer el logro de los objetivos </p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="colors3" value="1"id="numeros1111"  onClick="cambio33(this.value);" > </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="colors3" id="numeros2222" value="2" onClick="cambio33(this.value);" > </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="colors3" id="numeros3333"  value="3" onClick="cambio33(this.value);" > </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="colors3" id="numeros4444"  value="4" onClick="cambio33(this.value);" > </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="colors3"  id="numeros5555" value="5" onClick="cambio33(this.value);" > </label>
+                        </td>
+                     
+                    </tr>
+                        
+                    </tbody>
+                  </table>
+                                                  </fieldset>
+                                              
+                                           
+    <!--:::::::::::::::::::::::::::: Pantalla Tres ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+            
+            
+                <fieldset>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                      <th>Liberal </th>
+                        <th>Deficiente</th>
+                        <th>Regular</th>
+                        <th>Bueno</th>
+                        <th>Muy Bueno</th>
+                        <th>Excelente</th>
+                      
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td><p>Provee los recursos y las herramientas necesarias en cada área de trabajo para la ejecución de las actividades</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="colorss" value="1"id="numeross1"  onClick="cambioss(this.value);" > </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="colorss" id="numeross2" value="2" onClick="cambioss(this.value);" > </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="colorss" id="numeross3"  value="3" onClick="cambioss(this.value);" > </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="colorss" id="numeross4"  value="4" onClick="cambioss(this.value);" > </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="colorss"  id="numeross5" value="5" onClick="cambioss(this.value);" > </label>
+                        </td>
+                     
+                    </tr>
+                           <tr>
+                      <td><p>Toma las decisiones adecuadas y en el momento oportuno  para que su liderazgo sea eficiente frente al personal a cargo</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="colorss1" value="1"id="numeross11"  onClick="cambio111(this.value);" > </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="colorss1" id="numeross22" value="2" onClick="cambio111(this.value);" > </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="colorss1" id="numeross33"  value="3" onClick="cambio111(this.value);" > </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="colorss1" id="numeross44"  value="4" onClick="cambio111(this.value);" > </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="colorss1"  id="numeross55" value="5" onClick="cambio111(this.value);" > </label>
+                        </td>
+                     
+                    </tr>
+                               <tr>
+                      <td><p>Busca la integridad  y coherencia en las decisiones que toma con respecto a las áreas de trabajo a su cargo</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="colorss2" value="1"id="numeross111"  onClick="cambio222(this.value);" > </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="colorss2" id="numeross222" value="2" onClick="cambio222(this.value);" > </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="colorss2" id="numeross333"  value="3" onClick="cambio222(this.value);" > </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="colorss2" id="numeross444"  value="4" onClick="cambio222(this.value);" > </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="colorss2"  id="numeross555" value="5" onClick="cambio222(this.value);" > </label>
+                        </td>
+                     
+                    </tr>
+                               <tr>
+                      <td><p>Tiene como principal objetivo la absoluta libertad en cuanto a tomar decisiones que sean de beneficio para el área de trabajo que dirige</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="colorss3" value="1"id="numeross1111"  onClick="cambio333(this.value);" > </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="colorss3" id="numeross2222" value="2" onClick="cambio333(this.value);" > </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="colorss3" id="numeross3333"  value="3" onClick="cambio333(this.value);" > </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="colorss3" id="numeross4444"  value="4" onClick="cambio333(this.value);" > </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="colorss3"  id="numeross5555" value="5" onClick="cambio333(this.value);" > </label>
+                        </td>
+                     
+                    </tr>
+                        
+                    </tbody>
+                  </table>
+                                                  </fieldset>
+                                                
+                                            
+   <!--:::::::::::::::::::::::::::: Pantalla Cuatro ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+          
+               
+                <fieldset>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                      <th>Burocrático  </th>
+                        <th>Deficiente</th>
+                        <th>Regular</th>
+                        <th>Bueno</th>
+                        <th>Muy Bueno</th>
+                        <th>Excelente</th>
+                      
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td><p>Transmite y dirige las decisiones al equipo de trabajo a cargo de manera clara precisa y oportuna</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="colorsss" value="1"id="numerosss1"  onClick="cambiosss(this.value);" > </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="colorsss" id="numerosss2" value="2" onClick="cambiosss(this.value);" > </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="colorsss" id="numerosss3"  value="3" onClick="cambiosss(this.value);" > </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="colorsss" id="numerosss4"  value="4" onClick="cambiosss(this.value);" > </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="colorsss"  id="numerosss5" value="5" onClick="cambiosss(this.value);" > </label>
+                        </td>
+                     
+                    </tr>
+                           <tr>
+                      <td><p>Aplica normas estrictas de comportamiento en las áreas de trabajo a cargo</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="colorsss1" value="1"id="numerosss11"  onClick="cambio1111(this.value);" > </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="colorsss1" id="numerosss22" value="2" onClick="cambio1111(this.value);" > </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="colorsss1" id="numerosss33"  value="3" onClick="cambio1111(this.value);" > </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="colorsss1" id="numerosss44"  value="4" onClick="cambio1111(this.value);" > </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="colorsss1"  id="numerosss55" value="5" onClick="cambio1111(this.value);" > </label>
+                        </td>
+                     
+                    </tr>
+                               <tr>
+                      <td><p>Tiene la capacidad de influir en cada empleado para llevar a cabo el cumplimiento de los objetivos dentro de la organización</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="colorsss2" value="1"id="numerosss111"  onClick="cambio2222(this.value);" > </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="colorsss2" id="numerosss222" value="2" onClick="cambio2222(this.value);" > </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="colorsss2" id="numerosss333"  value="3" onClick="cambio2222(this.value);" > </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="colorsss2" id="numerosss444"  value="4" onClick="cambio2222(this.value);" > </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="colorsss2"  id="numerosss555" value="5" onClick="cambio2222(this.value);" > </label>
+                        </td>
+                     
+                    </tr>
+                               <tr>
+                      <td><p>Dirige al equipo de trabajo a la realización de actividades y cumplimiento de objetivos organizacionales</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="colorsss3" value="1"id="numerosss1111"  onClick="cambio3333(this.value);" > </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="colorsss3" id="numerosss2222" value="2" onClick="cambio3333(this.value);" > </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="colorsss3" id="numerosss3333"  value="3" onClick="cambio3333(this.value);" > </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="colorsss3" id="numerosss4444"  value="4" onClick="cambio3333(this.value);" > </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="colorsss3"  id="numerosss5555" value="5" onClick="cambio3333(this.value);" > </label>
+                        </td>
+                     
+                    </tr>
+                        
+                    </tbody>
+                  </table>
+                                                  </fieldset>
+                                               
+                                           
+   <!--:::::::::::::::::::::::::::: Pantalla Cinco ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+           
+               
+                    <fieldset>
+                    <table class="table table-striped">
+                    <thead>
+                    <tr>
+                      <th>Carismático </th>
+                        <th>Deficiente</th>
+                        <th>Regular</th>
+                        <th>Bueno</th>
+                        <th>Muy Bueno</th>
+                        <th>Excelente</th>
+                      
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td><p>Genera confianza a su equipo de trabajo para la ejecución de las actividades</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="colorssss" value="1"id="numerossss1"  onClick="cambiossss(this.value);" > </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="colorssss" id="numerossss2" value="2" onClick="cambiossss(this.value);" > </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="colorssss" id="numerossss3"  value="3" onClick="cambiossss(this.value);" > </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="colorssss" id="numerossss4"  value="4" onClick="cambiossss(this.value);" > </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="colorssss"  id="numerossss5" value="5" onClick="cambiossss(this.value);" > </label>
+                        </td>
+                     
+                    </tr>
+                           <tr>
+                      <td><p>Posee características como entusiasmo y energía positiva que inspire a los empleados a hacer un buen trabajo</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="colorssss1" value="1"id="numerossss11"  onClick="cambio11111(this.value);" > </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="colorssss1" id="numerossss22" value="2" onClick="cambio11111(this.value);" > </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="colorssss1" id="numerossss33"  value="3" onClick="cambio11111(this.value);" > </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="colorssss1" id="numerossss44"  value="4" onClick="cambio11111(this.value);" > </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="colorssss1"  id="numerossss55" value="5" onClick="cambio11111(this.value);" > </label>
+                        </td>
+                     
+                    </tr>
+                               <tr>
+                      <td><p>Posee la capacidad de motivar e inspirar a los empleados para que puedan dar su máximo esfuerzo con el fin de alcanzar las metas establecidas</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="colorssss2" value="1"id="numerossss111"  onClick="cambio22222(this.value);" > </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="colorssss2" id="numerossss222" value="2" onClick="cambio22222(this.value);" > </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="colorssss2" id="numerossss333"  value="3" onClick="cambio22222(this.value);" > </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="colorssss2" id="numerossss444"  value="4" onClick="cambio22222(this.value);" > </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="colorssss2"  id="numerossss555" value="5" onClick="cambio22222(this.value);" > </label>
+                        </td>
+                     
+                    </tr>
+                               <tr>
+                      <td><p>Empatiza genuinamente con el grupo de trabajo al comunicarse para la ejecución de las actividades</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="colorssss3" value="1"id="numerossss1111"  onClick="cambio33333(this.value);" > </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="colorssss3" id="numerossss2222" value="2" onClick="cambio33333(this.value);" > </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="colorssss3" id="numerossss3333"  value="3" onClick="cambio33333(this.value);" > </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="colorssss3" id="numerossss4444"  value="4" onClick="cambio33333(this.value);" > </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="colorssss3"  id="numerossss5555" value="5" onClick="cambio33333(this.value);" > </label>
+                        </td>
+                     
+                    </tr>
+                        
+                    </tbody>
+                  </table>
+                                                  </fieldset>
+                                              
+                                            
+       <!--:::::::::::::::::::::::::::: Pantalla Seis ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->                                    
+   
+                 <fieldset>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                      <th>Natural </th>
+                        <th>Deficiente</th>
+                        <th>Regular</th>
+                        <th>Bueno</th>
+                        <th>Muy Bueno</th>
+                        <th>Excelente</th>
+                      
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td><p>Posee una comunicación efectiva para generar mayor confianza</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="seis1" value="1"id="numerosssss1"  onClick="cambiosssss(this.value);" > </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="seis1" id="numerosssss2" value="2" onClick="cambiosssss(this.value);" > </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="seis1" id="numerosssss3"  value="3" onClick="cambiosssss(this.value);"> </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis1" id="numerosssss4"  value="4" onClick="cambiosssss(this.value);"> </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis1"  id="numerosssss5" value="5" onClick="cambiosssss(this.value);"> </label>
+                        </td>
+                     
+                    </tr>
+                           <tr>
+                      <td><p>Posee capacidades, conocimientos y habilidades que generan el respeto de los trabajadores</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="seis2" value="1"id="numerosssss11"  onClick="cambio111111(this.value);"> </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="seis2" id="numerosssss22" value="2" onClick="cambio111111(this.value);"> </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="seis2" id="numerosssss33"  value="3" onClick="cambio11111(this.value);"> </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis2" id="numerosssss44"  value="4" onClick="cambio111111(this.value);"> </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis2"  id="numerosssss55" value="5" onClick="cambio111111(this.value);"> </label>
+                        </td>
+                     
+                    </tr>
+                               <tr>
+                      <td><p>Es capaz de influenciar a las personas porque lo quieren, lo admiran o se identifican</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="seis3" value="1"id="numerosssss111"  onClick="cambio222222(this.value);"> </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="seis3" id="numerosssss222" value="2" onClick="cambio222222(this.value);"> </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="seis3" id="numerosssss333"  value="3" onClick="cambio222222(this.value);"> </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis3" id="numerosssss444"  value="4" onClick="cambio222222(this.value);"> </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis3"  id="numerosssss555" value="5" onClick="cambio222222(this.value);"> </label>
+                        </td>
+                     
+                    </tr>
+                               <tr>
+                      <td><p>Escucha los sentimientos y sugerencias de sus trabajadores aumentando el apoyo en la toma de decisiones</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="seis4" value="1"id="numerosssss1111"  onClick="cambio333333(this.value);"> </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="seis4" id="numerosssss2222" value="2" onClick="cambio333333(this.value);"> </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="seis4" id="numerosssss3333"  value="3" onClick="cambio333333(this.value);"> </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis4" id="numerosssss4444"  value="4" onClick="cambio333333(this.value);"> </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis4"  id="numerosssss5555" value="5" onClick="cambio333333(this.value);"> </label>
+                        </td>
+                     
+                    </tr>
+                        
+                    </tbody>
+                  </table>
+                                                  </fieldset>
+                                                
+                                            
+   <!--:::::::::::::::::::::::::::: Pantalla Siete ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->               
+   
+                 <fieldset>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                      <th>Transaccional </th>
+                        <th>Deficiente</th>
+                        <th>Regular</th>
+                        <th>Bueno</th>
+                        <th>Muy Bueno</th>
+                        <th>Excelente</th>
+                      
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td><p>Guía  y dirige a sus subordinados de manera tal que busquen el desarrollo de sus objetivos</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="seis5" value="1"id="numerossssss1"  onClick="cambiossssss(this.value);"> </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="seis5" id="numerossssss2" value="2" onClick="cambiossssss(this.value);"> </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="seis5" id="numerossssss3"  value="3" onClick="cambiossssss(this.value);"> </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis5" id="numerossssss4"  value="4" onClick="cambiossssss(this.value);"> </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis5"  id="numerossssss5" value="5" onClick="cambiossssss(this.value);"> </label>
+                        </td>
+                     
+                    </tr>
+                           <tr>
+                      <td><p>Tiene la habilidad para incentivar y dirigir equipos de trabajo obteniendo resultados efectivos</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="seis6" value="1"id="numerossssss11"  onClick="cambio1111111(this.value);"> </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="seis6" id="numerossssss22" value="2" onClick="cambio1111111(this.value);"> </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="seis6" id="numerossssss33"  value="3" onClick="cambio111111(this.value);"></label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis6" id="numerossssss44"  value="4" onClick="cambio1111111(this.value);"> </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis6"  id="numerossssss55" value="5" onClick="cambio1111111(this.value);"> </label>
+                        </td>
+                     
+                    </tr>
+                               <tr>
+                      <td><p>  Tiene el poder de recompensar los comportamientos de los trabajadores, a través de incentivos  </p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="seis7" value="1"id="numerossssss111"  onClick="cambio2222222(this.value);"> </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="seis7" id="numerossssss222" value="2" onClick="cambio2222222(this.value);"> </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="seis7" id="numerossssss333"  value="3" onClick="cambio2222222(this.value);"> </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis7" id="numerossssss444"  value="4" onClick="cambio2222222(this.value);"> </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis7"  id="numerossssss555" value="5" onClick="cambio2222222(this.value);"></label>
+                        </td>
+                     
+                    </tr>
+                               <tr>
+                      <td><p>Proporciona a sus colaboradores los conocimientos específicos que necesitan para cumplir sus tareas</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="seis77" value="1"id="numerossssss1111"  onClick="cambio3333333(this.value);"> </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="seis77" id="numerossssss2222" value="2" onClick="cambio3333333(this.value);"> </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="seis77" id="numerossssss3333"  value="3" onClick="cambio3333333(this.value);"> </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis77" id="numerossssss4444"  value="4" onClick="cambio3333333(this.value);"></label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis77"  id="numerossssss5555" value="5" onClick="cambio3333333(this.value);"> </label>
+                        </td>
+                     
+                    </tr>
+                        
+                    </tbody>
+                  </table>
+                                                  </fieldset>
+                                                
+                                           
+    <!--::::::::::::::::::::::::::::::::::::: parte 8 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+                                            
+   
+                 <fieldset>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                      <th>Transformacional </th>
+                        <th>Deficiente</th>
+                        <th>Regular</th>
+                        <th>Bueno</th>
+                        <th>Muy Bueno</th>
+                        <th>Excelente</th>
+                      
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td><p>Estimula a sus colaboradores a que exploren sus puntos de vista para alcanzar soluciones innovadoras</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="seis8" value="1"id="numerosssssss1"  onClick="cambiosssssss(this.value);"> </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="seis8" id="numerosssssss2" value="2" onClick="cambiosssssss(this.value);"> </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="seis8" id="numerosssssss3"  value="3" onClick="cambiosssssss(this.value);"> </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis8" id="numerosssssss4"  value="4" onClick="cambiosssssss(this.value);"></label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis8"  id="numerosssssss5" value="5" onClick="cambiosssssss(this.value);"> </label>
+                        </td>
+                     
+                    </tr>
+                           <tr>
+                      <td><p>Tiene habilidad para transmitir confianza y entusiasmo a los miembros de su equipo de trabajo</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="seis9" value="1"id="numerosssssss11"  onClick="cambio11111111(this.value);"> </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="seis9" id="numerosssssss22" value="2" onClick="cambio11111111(this.value);"> </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="seis9" id="numerosssssss33"  value="3" onClick="cambio1111111(this.value);"> </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis9" id="numerosssssss44"  value="4" onClick="cambio11111111(this.value);"> </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis9"  id="numerosssssss55" value="5" onClick="cambio11111111(this.value);"> </label>
+                        </td>
+                     
+                    </tr>
+                               <tr>
+                      <td><p>Aplica la reestructuración de conocimientos organizacionales orientado a la mejora continua</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="seis10" value="1"id="numerosssssss111"  onClick="cambio22222222(this.value);"> </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="seis10" id="numerosssssss222" value="2" onClick="cambio22222222(this.value);"> </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="seis10" id="numerosssssss333"  value="3" onClick="cambio22222222(this.value);"> </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis10" id="numerosssssss444"  value="4" onClick="cambio22222222(this.value);"> </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis10"  id="numerosssssss555" value="5" onClick="cambio22222222(this.value);"> </label>
+                        </td>
+                     
+                    </tr>
+                               <tr>
+                      <td><p>Direcciona a sus colaboradores al cumplimiento de tareas, actividades y funciones</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="seis11" value="1"id="numerosssssss1111"  onClick="cambio33333333(this.value);"> </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="seis11" id="numerosssssss2222" value="2" onClick="cambio33333333(this.value);"> </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="seis11" id="numerosssssss3333"  value="3" onClick="cambio33333333(this.value);"></label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis11" id="numerosssssss4444"  value="4" onClick="cambio33333333(this.value);"> </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis11"  id="numerosssssss5555" value="5" onClick="cambio33333333(this.value);"> </label>
+                        </td>
+                     
+                    </tr>
+                        
+                    </tbody>
+                  </table>
+                                                  </fieldset>
+                                          
+        <!--::::::::::::::::::::::::::::::: Parte 9 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+                                       
+   
+                 <fieldset>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                      <th>Pro las personas </th>
+                        <th>Deficiente</th>
+                        <th>Regular</th>
+                        <th>Bueno</th>
+                        <th>Muy Bueno</th>
+                        <th>Excelente</th>
+                      
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td><p>Genera el ambiente idóneo para que los demás desarrollen la comprensión y colaboración entre todos</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="seis12" value="1"id="numerossssssss1"  onClick="cambiossssssss(this.value);"> </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="seis12" id="numerossssssss2" value="2" onClick="cambiossssssss(this.value);"> </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="seis12" id="numerossssssss3"  value="3" onClick="cambiossssssss(this.value);"> </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis12" id="numerossssssss4"  value="4" onClick="cambiossssssss(this.value);"> </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis12"  id="numerossssssss5" value="5" onClick="cambiossssssss(this.value);"> </label>
+                        </td>
+                     
+                    </tr>
+                           <tr>
+                      <td><p>Tiene la habilidad para organizar y apoyar a su equipo de trabajo en los problemas personales y organizacionales</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="seis13" value="1"id="numerossssssss11"  onClick="cambio111111111(this.value);"> </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="seis13" id="numerossssssss22" value="2" onClick="cambio111111111(this.value);"></label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="seis13" id="numerossssssss33"  value="3" onClick="cambio111111111(this.value);"> </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis13" id="numerossssssss44"  value="4" onClick="cambio111111111(this.value);"> </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis13"  id="numerossssssss55" value="5" onClick="cambio111111111(this.value);"> </label>
+                        </td>
+                     
+                    </tr>
+                               <tr>
+                      <td><p>La interacción que tiene con las demás personas es de mutuo respeto</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="seis14" value="1"id="numerossssssss111"  onClick="cambio222222222(this.value);"> </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="seis14" id="numerossssssss222" value="2" onClick="cambio222222222(this.value);"> </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="seis14" id="numerossssssss333"  value="3" onClick="cambio222222222(this.value);"> </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis14" id="numerossssssss444"  value="4"                onClick="cambio222222222(this.value);"> </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis14"  id="numerossssssss555" value="5"                onClick="cambio222222222(this.value);"> </label>
+                        </td>
+                     
+                    </tr>
+                               <tr>
+                      <td><p>Acepta y considera las ideas y opiniones que manifiestan los miembros del equipo de trabajo</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="seis15" value="1"id="numerossssssss1111"  onClick="cambio333333333(this.value);"> </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="seis15" id="numerossssssss2222" value="2" onClick="cambio333333333(this.value);"> </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="seis15" id="numerossssssss3333"  value="3" onClick="cambio333333333(this.value);"> </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis15" id="numerossssssss4444"  value="4" onClick="cambio333333333(this.value);"> </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis15"  id="numerossssssss5555" value="5" onClick="cambio333333333(this.value);"> </label>
+                        </td>
+                     
+                    </tr>
+                        
+                    </tbody>
+                  </table>
+                                                  </fieldset>
+                                         
+        <!--:::::::::::::::::::::::::::::::::::: Parte 10 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->                                   
+   
+                 <fieldset>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                      <th>Orientado a la tarea </th>
+                        <th>Deficiente</th>
+                        <th>Regular</th>
+                        <th>Bueno</th>
+                        <th>Muy Bueno</th>
+                        <th>Excelente</th>
+                      
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td><p>Trabaja con mecanismos que permiten agilizar la productividad y eficiencia</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="seis16" value="1"id="numerosssssssss1"  onClick="cambiosssssssss(this.value);"> </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="seis16" id="numerosssssssss2" value="2" onClick="cambiosssssssss(this.value);"> </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="seis16" id="numerosssssssss3"  value="3" onClick="cambiosssssssss(this.value);"> </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis16" id="numerosssssssss4"  value="4" onClick="cambiosssssssss(this.value);" > </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis16"  id="numerosssssssss5" value="5" onClick="cambiosssssssss(this.value);" > </label>
+                        </td>
+                     
+                    </tr>
+                           <tr>
+                      <td><p>Se anticipa a los resultados y establece medidas de acción correctiva</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="seis17" value="1"id="numerosssssssss11"  onClick="cambio1111111111(this.value);" > </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="seis17" id="numerosssssssss22" value="2" onClick="cambio1111111111(this.value);" > </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="seis17" id="numerosssssssss33"  value="3" onClick="cambio111111111(this.value);" > </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis17" id="numerosssssssss44"  value="4" onClick="cambio1111111111(this.value);" > </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis17"  id="numerosssssssss55" value="5" onClick="cambio1111111111(this.value);" > </label>
+                        </td>
+                     
+                    </tr>
+                               <tr>
+                      <td><p>Direcciona y supervisa el cumplimiento de tareas, actividades y funciones</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="seis18" value="1"id="numerosssssssss111"  onClick="cambio2222222222(this.value);" > </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="seis18" id="numerosssssssss222" value="2" onClick="cambio2222222222(this.value);" > </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="seis18" id="numerosssssssss333"  value="3" onClick="cambio2222222222(this.value);" > </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis18" id="numerosssssssss444"  value="4" onClick="cambio2222222222(this.value);" > </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis18"  id="numerosssssssss555" value="5" onClick="cambio2222222222(this.value);" > </label>
+                        </td>
+                     
+                    </tr>
+                               <tr>
+                      <td><p>Identifica los intereses organizacionales e induce a los colaboradores al cumplimiento de metas</p></td>
+                        <td>
+                            <label >  <input style="width:20px;height:20px"; type="radio" name="seis19" value="1"id="numerosssssssss1111"  onClick="cambio3333333333(this.value);" > </label>
+                        </td>
+                         <td>
+                             
+                            <label><input style="width:20px;height:20px"; type="radio" name="seis19" id="numerosssssssss2222" value="2" onClick="cambio3333333333(this.value);" > </label>
+                        </td>
+                         <td> 
+                            <label> <input style="width:20px;height:20px"; type="radio" name="seis19" id="numerosssssssss3333"  value="3" onClick="cambio3333333333(this.value);" > </label>
+                       
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis19" id="numerosssssssss4444"  value="4" onClick="cambio3333333333(this.value);" > </label>
+                        </td>
+                         <td> <label> <input style="width:20px;height:20px"; type="radio" name="seis19"  id="numerosssssssss5555" value="5" onClick="cambio3333333333(this.value);" > </label>
+                        </td>
+                     
+                    </tr>
+                        
+                    </tbody>
+                  </table>
+                                                  </fieldset>
+                                                
+                                          
+   <!--:::::::::::::::::::::::::::: BOTONES DE NAVEGACION ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+                                             <div class="form-actions">
+                                          <button type="submit" class="btn btn-primary">Enviar</button>
+                                          <a href="index.html" type="reset" class="btn">Cancelar</a>
+                                        </div>  
+      </div> </form>
+                                    </div>
+      
+                                </div>
+                            </div>
+                                    
+                        </div>
+                        <!-- /block -->
+                    </div>
+			
+                     	<!-- /block -->
+		    </div>
+                     <!-- /validation -->
+
+ 
+                </div>
+                 
+            </div>
+            <hr>
+             <footer>
+                <p>&copy; Derechos Reservados GT02 Equipo 4 administración de personal III </p>
+            </footer>
+        </div>
+        <!--/.fluid-container-->
+        <link href="vendors/datepicker.css" rel="stylesheet" media="screen">
+        <link href="vendors/uniform.default.css" rel="stylesheet" media="screen">
+        <link href="vendors/chosen.min.css" rel="stylesheet" media="screen">
+
+        <link href="vendors/wysiwyg/bootstrap-wysihtml5.css" rel="stylesheet" media="screen">
+
+        <script src="vendors/jquery-1.9.1.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="vendors/jquery.uniform.min.js"></script>
+        <script src="vendors/chosen.jquery.min.js"></script>
+        <script src="vendors/bootstrap-datepicker.js"></script>
+
+        <script src="vendors/wysiwyg/wysihtml5-0.3.0.js"></script>
+        <script src="vendors/wysiwyg/bootstrap-wysihtml5.js"></script>
+
+        <script src="vendors/wizard/jquery.bootstrap.wizard.min.js"></script>
+
+	<script type="text/javascript" src="vendors/jquery-validation/dist/jquery.validate.min.js"></script>
+	<script src="assets/form-validation.js"></script>
+        
+	<script src="assets/scripts.js"></script>
+        <script>
+
+	jQuery(document).ready(function() {   
+	   FormValidation.init();
+	});
+	
+
+        $(function() {
+            $(".datepicker").datepicker();
+            $(".uniform_on").uniform();
+            $(".chzn-select").chosen();
+            $('.textarea').wysihtml5();
+
+            $('#rootwizard').bootstrapWizard({onTabShow: function(tab, navigation, index) {
+                var $total = navigation.find('li').length;
+                var $current = index+1;
+                var $percent = ($current/$total) * 100;
+                $('#rootwizard').find('.bar').css({width:$percent+'%'});
+                // If it's the last tab then hide the last button and show the finish instead
+                if($current >= $total) {
+                    $('#rootwizard').find('.pager .next').hide();
+                    $('#rootwizard').find('.pager .finish').show();
+                    $('#rootwizard').find('.pager .finish').removeClass('disabled');
+                } else {
+                    $('#rootwizard').find('.pager .next').show();
+                    $('#rootwizard').find('.pager .finish').hide();
+                }
+            }});
+            $('#rootwizard .finish').click(function() {
+                alert('Finished!, Starting over!');
+                $('#rootwizard').find("a[href*='tab1']").trigger('click');
+            });
+        });
+        </script>
+        
+        <script>
+        function cambio(X){
+  if(X == 1){
+      
+    $("#numero2").attr('disabled','disabled');
+    $("#numero3").attr('disabled','disabled');
+    $("#numero4").attr('disabled','disabled');
+    $("#numero5").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numero1").attr('disabled','disabled');
+    $("#numero3").attr('disabled','disabled');
+    $("#numero4").attr('disabled','disabled');
+    $("#numero5").attr('disabled','disabled');
+  }
+            if(X == 3){
+    $("#numero2").attr('disabled','disabled');
+    $("#numero1").attr('disabled','disabled');
+    $("#numero4").attr('disabled','disabled');
+    $("#numero5").attr('disabled','disabled');
+  }
+            if(X == 4){
+    $("#numero2").attr('disabled','disabled');
+    $("#numero3").attr('disabled','disabled');
+    $("#numero1").attr('disabled','disabled');
+    $("#numero5").attr('disabled','disabled');
+  }
+            if(X == 5){
+    $("#numero2").attr('disabled','disabled');
+    $("#numero3").attr('disabled','disabled');
+    $("#numero4").attr('disabled','disabled');
+    $("#numero1").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+            return valor;
+}
+               function cambio1(X){
+  if(X == 1){
+      
+    $("#numero22").attr('disabled','disabled');
+    $("#numero33").attr('disabled','disabled');
+    $("#numero44").attr('disabled','disabled');
+    $("#numero55").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numero11").attr('disabled','disabled');
+    $("#numero33").attr('disabled','disabled');
+    $("#numero44").attr('disabled','disabled');
+    $("#numero55").attr('disabled','disabled');
+  }
+            if(X == 3){
+                
+    $("#numero22").attr('disabled','disabled');
+    $("#numero11").attr('disabled','disabled');
+    $("#numero44").attr('disabled','disabled');
+    $("#numero55").attr('disabled','disabled');
+  }
+            if(X == 4){
+               
+    $("#numero22").attr('disabled','disabled');
+    $("#numero33").attr('disabled','disabled');
+    $("#numero11").attr('disabled','disabled');
+    $("#numero55").attr('disabled','disabled');
+  }
+            if(X == 5){
+                
+    $("#numero22").attr('disabled','disabled');
+    $("#numero33").attr('disabled','disabled');
+    $("#numero44").attr('disabled','disabled');
+    $("#numero11").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+}
+                     function cambio2(X){
+  if(X == 1){
+      
+    $("#numero222").attr('disabled','disabled');
+    $("#numero333").attr('disabled','disabled');
+    $("#numero444").attr('disabled','disabled');
+    $("#numero555").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numero111").attr('disabled','disabled');
+    $("#numero333").attr('disabled','disabled');
+    $("#numero444").attr('disabled','disabled');
+    $("#numero555").attr('disabled','disabled');
+  }
+            if(X == 3){
+                
+    $("#numero222").attr('disabled','disabled');
+    $("#numero111").attr('disabled','disabled');
+    $("#numero444").attr('disabled','disabled');
+    $("#numero555").attr('disabled','disabled');
+  }
+            if(X == 4){
+                
+    $("#numero222").attr('disabled','disabled');
+    $("#numero333").attr('disabled','disabled');
+    $("#numero111").attr('disabled','disabled');
+    $("#numero555").attr('disabled','disabled');
+  }
+            if(X == 5){
+               
+    $("#numero222").attr('disabled','disabled');
+    $("#numero333").attr('disabled','disabled');
+    $("#numero444").attr('disabled','disabled');
+    $("#numero111").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+}
+                        function cambio3(X){
+  if(X == 1){
+     
+    $("#numero2222").attr('disabled','disabled');
+    $("#numero3333").attr('disabled','disabled');
+    $("#numero4444").attr('disabled','disabled');
+    $("#numero5555").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numero1111").attr('disabled','disabled');
+    $("#numero3333").attr('disabled','disabled');
+    $("#numero4444").attr('disabled','disabled');
+    $("#numero5555").attr('disabled','disabled');
+  }
+            if(X == 3){
+                
+    $("#numero2222").attr('disabled','disabled');
+    $("#numero1111").attr('disabled','disabled');
+    $("#numero4444").attr('disabled','disabled');
+    $("#numero5555").attr('disabled','disabled');
+  }
+            if(X == 4){
+                
+    $("#numero2222").attr('disabled','disabled');
+    $("#numero3333").attr('disabled','disabled');
+    $("#numero1111").attr('disabled','disabled');
+    $("#numero5555").attr('disabled','disabled');
+  }
+            if(X == 5){
+                
+    $("#numero2222").attr('disabled','disabled');
+    $("#numero3333").attr('disabled','disabled');
+    $("#numero4444").attr('disabled','disabled');
+    $("#numero1111").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+                            
+}
+//:::::::::::::::::::::::: Opcion 2 ::::::::::::::::::::::::::::::::::
+
+        function cambios(X){
+  if(X == 1){
+      
+    $("#numeros2").attr('disabled','disabled');
+    $("#numeros3").attr('disabled','disabled');
+    $("#numeros4").attr('disabled','disabled');
+    $("#numeros5").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numeros1").attr('disabled','disabled');
+    $("#numeros3").attr('disabled','disabled');
+    $("#numeros4").attr('disabled','disabled');
+    $("#numeros5").attr('disabled','disabled');
+  }
+            if(X == 3){
+    $("#numeros2").attr('disabled','disabled');
+    $("#numeros1").attr('disabled','disabled');
+    $("#numeros4").attr('disabled','disabled');
+    $("#numeros5").attr('disabled','disabled');
+  }
+            if(X == 4){
+    $("#numeros2").attr('disabled','disabled');
+    $("#numeros3").attr('disabled','disabled');
+    $("#numeros1").attr('disabled','disabled');
+    $("#numeros5").attr('disabled','disabled');
+  }
+            if(X == 5){
+    $("#numeros2").attr('disabled','disabled');
+    $("#numeros3").attr('disabled','disabled');
+    $("#numeros4").attr('disabled','disabled');
+    $("#numeros1").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+            return valor;
+}
+               function cambio11(X){
+  if(X == 1){
+      
+    $("#numeros22").attr('disabled','disabled');
+    $("#numeros33").attr('disabled','disabled');
+    $("#numeros44").attr('disabled','disabled');
+    $("#numeros55").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numeros11").attr('disabled','disabled');
+    $("#numeros33").attr('disabled','disabled');
+    $("#numeros44").attr('disabled','disabled');
+    $("#numeros55").attr('disabled','disabled');
+  }
+            if(X == 3){
+                
+    $("#numeros22").attr('disabled','disabled');
+    $("#numeros11").attr('disabled','disabled');
+    $("#numeros44").attr('disabled','disabled');
+    $("#numeros55").attr('disabled','disabled');
+  }
+            if(X == 4){
+               
+    $("#numeros22").attr('disabled','disabled');
+    $("#numeros33").attr('disabled','disabled');
+    $("#numeros11").attr('disabled','disabled');
+    $("#numeros55").attr('disabled','disabled');
+  }
+            if(X == 5){
+                
+    $("#numeros22").attr('disabled','disabled');
+    $("#numeros33").attr('disabled','disabled');
+    $("#numeros44").attr('disabled','disabled');
+    $("#numeros11").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+}
+                     function cambio22(X){
+  if(X == 1){
+      
+    $("#numeros222").attr('disabled','disabled');
+    $("#numeros333").attr('disabled','disabled');
+    $("#numeros444").attr('disabled','disabled');
+    $("#numeros555").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numeros111").attr('disabled','disabled');
+    $("#numeros333").attr('disabled','disabled');
+    $("#numeros444").attr('disabled','disabled');
+    $("#numeros555").attr('disabled','disabled');
+  }
+            if(X == 3){
+                
+    $("#numeros222").attr('disabled','disabled');
+    $("#numeros111").attr('disabled','disabled');
+    $("#numeros444").attr('disabled','disabled');
+    $("#numeros555").attr('disabled','disabled');
+  }
+            if(X == 4){
+                
+    $("#numeros222").attr('disabled','disabled');
+    $("#numeros333").attr('disabled','disabled');
+    $("#numeros111").attr('disabled','disabled');
+    $("#numeros555").attr('disabled','disabled');
+  }
+            if(X == 5){
+               
+    $("#numeros222").attr('disabled','disabled');
+    $("#numeros333").attr('disabled','disabled');
+    $("#numeros444").attr('disabled','disabled');
+    $("#numeros111").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+}
+                        function cambio33(X){
+  if(X == 1){
+     
+    $("#numeros2222").attr('disabled','disabled');
+    $("#numeros3333").attr('disabled','disabled');
+    $("#numeros4444").attr('disabled','disabled');
+    $("#numeros5555").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numeros1111").attr('disabled','disabled');
+    $("#numeros3333").attr('disabled','disabled');
+    $("#numeros4444").attr('disabled','disabled');
+    $("#numeros5555").attr('disabled','disabled');
+  }
+            if(X == 3){
+                
+    $("#numeros2222").attr('disabled','disabled');
+    $("#numeros1111").attr('disabled','disabled');
+    $("#numeros4444").attr('disabled','disabled');
+    $("#numeros5555").attr('disabled','disabled');
+  }
+            if(X == 4){
+                
+    $("#numeros2222").attr('disabled','disabled');
+    $("#numeros3333").attr('disabled','disabled');
+    $("#numeros1111").attr('disabled','disabled');
+    $("#numeros5555").attr('disabled','disabled');
+  }
+            if(X == 5){
+                
+    $("#numeros2222").attr('disabled','disabled');
+    $("#numeros3333").attr('disabled','disabled');
+    $("#numeros4444").attr('disabled','disabled');
+    $("#numeros1111").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+                            
+}          
+            
+            
+//::::::::::::::::::::::::::::::::::: FIN DE opcion 2:::::::::::::::::::::::::::::::::
+            
+//:::::::::::::::::::::::::::::::::::::::::: Opcion 3::::::::::::::::::::::::::::::::::
+
+        function cambioss(X){
+  if(X == 1){
+      
+    $("#numeross2").attr('disabled','disabled');
+    $("#numeross3").attr('disabled','disabled');
+    $("#numeross4").attr('disabled','disabled');
+    $("#numeross5").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numeross1").attr('disabled','disabled');
+    $("#numeross3").attr('disabled','disabled');
+    $("#numeross4").attr('disabled','disabled');
+    $("#numeross5").attr('disabled','disabled');
+  }
+            if(X == 3){
+    $("#numeross2").attr('disabled','disabled');
+    $("#numeross1").attr('disabled','disabled');
+    $("#numeross4").attr('disabled','disabled');
+    $("#numeross5").attr('disabled','disabled');
+  }
+            if(X == 4){
+    $("#numeross2").attr('disabled','disabled');
+    $("#numeross3").attr('disabled','disabled');
+    $("#numeross1").attr('disabled','disabled');
+    $("#numeross5").attr('disabled','disabled');
+  }
+            if(X == 5){
+    $("#numeross2").attr('disabled','disabled');
+    $("#numeross3").attr('disabled','disabled');
+    $("#numeross4").attr('disabled','disabled');
+    $("#numeross1").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+            return valor;
+}
+               function cambio111(X){
+  if(X == 1){
+      
+    $("#numeross22").attr('disabled','disabled');
+    $("#numeross33").attr('disabled','disabled');
+    $("#numeross44").attr('disabled','disabled');
+    $("#numeross55").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numeross11").attr('disabled','disabled');
+    $("#numeross33").attr('disabled','disabled');
+    $("#numeross44").attr('disabled','disabled');
+    $("#numeross55").attr('disabled','disabled');
+  }
+            if(X == 3){
+                
+    $("#numeross22").attr('disabled','disabled');
+    $("#numeross11").attr('disabled','disabled');
+    $("#numeross44").attr('disabled','disabled');
+    $("#numeross55").attr('disabled','disabled');
+  }
+            if(X == 4){
+               
+    $("#numeross22").attr('disabled','disabled');
+    $("#numeross33").attr('disabled','disabled');
+    $("#numeross11").attr('disabled','disabled');
+    $("#numeross55").attr('disabled','disabled');
+  }
+            if(X == 5){
+                
+    $("#numeross22").attr('disabled','disabled');
+    $("#numeross33").attr('disabled','disabled');
+    $("#numeross44").attr('disabled','disabled');
+    $("#numeross11").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+}
+                     function cambio222(X){
+  if(X == 1){
+      
+    $("#numeross222").attr('disabled','disabled');
+    $("#numeross333").attr('disabled','disabled');
+    $("#numeross444").attr('disabled','disabled');
+    $("#numeross555").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numeross111").attr('disabled','disabled');
+    $("#numeross333").attr('disabled','disabled');
+    $("#numeross444").attr('disabled','disabled');
+    $("#numeross555").attr('disabled','disabled');
+  }
+            if(X == 3){
+                
+    $("#numeross222").attr('disabled','disabled');
+    $("#numeross111").attr('disabled','disabled');
+    $("#numeross444").attr('disabled','disabled');
+    $("#numeross555").attr('disabled','disabled');
+  }
+            if(X == 4){
+                
+    $("#numeross222").attr('disabled','disabled');
+    $("#numeross333").attr('disabled','disabled');
+    $("#numeross111").attr('disabled','disabled');
+    $("#numeross555").attr('disabled','disabled');
+  }
+            if(X == 5){
+               
+    $("#numeross222").attr('disabled','disabled');
+    $("#numeross333").attr('disabled','disabled');
+    $("#numeross444").attr('disabled','disabled');
+    $("#numeross111").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+}
+                        function cambio333(X){
+  if(X == 1){
+     
+    $("#numeross2222").attr('disabled','disabled');
+    $("#numeross3333").attr('disabled','disabled');
+    $("#numeross4444").attr('disabled','disabled');
+    $("#numeross5555").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numeross1111").attr('disabled','disabled');
+    $("#numeross3333").attr('disabled','disabled');
+    $("#numeross4444").attr('disabled','disabled');
+    $("#numeross5555").attr('disabled','disabled');
+  }
+            if(X == 3){
+                
+    $("#numeross2222").attr('disabled','disabled');
+    $("#numeross1111").attr('disabled','disabled');
+    $("#numeross4444").attr('disabled','disabled');
+    $("#numeross5555").attr('disabled','disabled');
+  }
+            if(X == 4){
+                
+    $("#numeross2222").attr('disabled','disabled');
+    $("#numeross3333").attr('disabled','disabled');
+    $("#numeross1111").attr('disabled','disabled');
+    $("#numeross5555").attr('disabled','disabled');
+  }
+            if(X == 5){
+                
+    $("#numeross2222").attr('disabled','disabled');
+    $("#numeross3333").attr('disabled','disabled');
+    $("#numeross4444").attr('disabled','disabled');
+    $("#numeross1111").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+                            
+}          
+
+//::::::::::::::::::::::::::::::::::: FIN DE opcion 3:::::::::::::::::::::::::::::::::
+//:::::::::::::::::::::::::::::::::::::::::: Opcion 4::::::::::::::::::::::::::::::::::
+
+        function cambiosss(X){
+  if(X == 1){
+      
+    $("#numerosss2").attr('disabled','disabled');
+    $("#numerosss3").attr('disabled','disabled');
+    $("#numerosss4").attr('disabled','disabled');
+    $("#numerosss5").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numerosss1").attr('disabled','disabled');
+    $("#numerosss3").attr('disabled','disabled');
+    $("#numerosss4").attr('disabled','disabled');
+    $("#numerosss5").attr('disabled','disabled');
+  }
+            if(X == 3){
+    $("#numerosss2").attr('disabled','disabled');
+    $("#numerosss1").attr('disabled','disabled');
+    $("#numerosss4").attr('disabled','disabled');
+    $("#numerosss5").attr('disabled','disabled');
+  }
+            if(X == 4){
+    $("#numerosss2").attr('disabled','disabled');
+    $("#numerosss3").attr('disabled','disabled');
+    $("#numerosss1").attr('disabled','disabled');
+    $("#numerosss5").attr('disabled','disabled');
+  }
+            if(X == 5){
+    $("#numerosss2").attr('disabled','disabled');
+    $("#numerosss3").attr('disabled','disabled');
+    $("#numerosss4").attr('disabled','disabled');
+    $("#numerosss1").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+            return valor;
+}
+               function cambio1111(X){
+  if(X == 1){
+      
+    $("#numerosss22").attr('disabled','disabled');
+    $("#numerosss33").attr('disabled','disabled');
+    $("#numerosss44").attr('disabled','disabled');
+    $("#numerosss55").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numerosss11").attr('disabled','disabled');
+    $("#numerosss33").attr('disabled','disabled');
+    $("#numerosss44").attr('disabled','disabled');
+    $("#numerosss55").attr('disabled','disabled');
+  }
+            if(X == 3){
+                
+    $("#numerosss22").attr('disabled','disabled');
+    $("#numerosss11").attr('disabled','disabled');
+    $("#numerosss44").attr('disabled','disabled');
+    $("#numerosss55").attr('disabled','disabled');
+  }
+            if(X == 4){
+               
+    $("#numerosss22").attr('disabled','disabled');
+    $("#numerosss33").attr('disabled','disabled');
+    $("#numerosss11").attr('disabled','disabled');
+    $("#numerosss55").attr('disabled','disabled');
+  }
+            if(X == 5){
+                
+    $("#numerosss22").attr('disabled','disabled');
+    $("#numerosss33").attr('disabled','disabled');
+    $("#numerosss44").attr('disabled','disabled');
+    $("#numerosss11").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+}
+                     function cambio2222(X){
+  if(X == 1){
+      
+    $("#numerosss222").attr('disabled','disabled');
+    $("#numerosss333").attr('disabled','disabled');
+    $("#numerosss444").attr('disabled','disabled');
+    $("#numerosss555").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numerosss111").attr('disabled','disabled');
+    $("#numerosss333").attr('disabled','disabled');
+    $("#numerosss444").attr('disabled','disabled');
+    $("#numerosss555").attr('disabled','disabled');
+  }
+            if(X == 3){
+                
+    $("#numerosss222").attr('disabled','disabled');
+    $("#numerosss111").attr('disabled','disabled');
+    $("#numerosss444").attr('disabled','disabled');
+    $("#numerosss555").attr('disabled','disabled');
+  }
+            if(X == 4){
+                
+    $("#numerosss222").attr('disabled','disabled');
+    $("#numerosss333").attr('disabled','disabled');
+    $("#numerosss111").attr('disabled','disabled');
+    $("#numerosss555").attr('disabled','disabled');
+  }
+            if(X == 5){
+               
+    $("#numerosss222").attr('disabled','disabled');
+    $("#numerosss333").attr('disabled','disabled');
+    $("#numerosss444").attr('disabled','disabled');
+    $("#numerosss111").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+}
+                        function cambio3333(X){
+  if(X == 1){
+     
+    $("#numerosss2222").attr('disabled','disabled');
+    $("#numerosss3333").attr('disabled','disabled');
+    $("#numerosss4444").attr('disabled','disabled');
+    $("#numerosss5555").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numerosss1111").attr('disabled','disabled');
+    $("#numerosss3333").attr('disabled','disabled');
+    $("#numerosss4444").attr('disabled','disabled');
+    $("#numerosss5555").attr('disabled','disabled');
+  }
+            if(X == 3){
+                
+    $("#numerosss2222").attr('disabled','disabled');
+    $("#numerosss1111").attr('disabled','disabled');
+    $("#numerosss4444").attr('disabled','disabled');
+    $("#numerosss5555").attr('disabled','disabled');
+  }
+            if(X == 4){
+                
+    $("#numerosss2222").attr('disabled','disabled');
+    $("#numerosss3333").attr('disabled','disabled');
+    $("#numerosss1111").attr('disabled','disabled');
+    $("#numerosss5555").attr('disabled','disabled');
+  }
+            if(X == 5){
+                
+    $("#numerosss2222").attr('disabled','disabled');
+    $("#numerosss3333").attr('disabled','disabled');
+    $("#numerosss4444").attr('disabled','disabled');
+    $("#numerosss1111").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+                            
+}          
+
+//::::::::::::::::::::::::::::::::::: FIN DE opcion 4:::::::::::::::::::::::::::::::::   
+
+//:::::::::::::::::::::::::::::::::::::::::: Opcion 5::::::::::::::::::::::::::::::::::
+
+        function cambiossss(X){
+  if(X == 1){
+      
+    $("#numerossss2").attr('disabled','disabled');
+    $("#numerossss3").attr('disabled','disabled');
+    $("#numerossss4").attr('disabled','disabled');
+    $("#numerossss5").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numerossss1").attr('disabled','disabled');
+    $("#numerossss3").attr('disabled','disabled');
+    $("#numerossss4").attr('disabled','disabled');
+    $("#numerossss5").attr('disabled','disabled');
+  }
+            if(X == 3){
+    $("#numerossss2").attr('disabled','disabled');
+    $("#numerossss1").attr('disabled','disabled');
+    $("#numerossss4").attr('disabled','disabled');
+    $("#numerossss5").attr('disabled','disabled');
+  }
+            if(X == 4){
+    $("#numerossss2").attr('disabled','disabled');
+    $("#numerossss3").attr('disabled','disabled');
+    $("#numerossss1").attr('disabled','disabled');
+    $("#numerossss5").attr('disabled','disabled');
+  }
+            if(X == 5){
+    $("#numerossss2").attr('disabled','disabled');
+    $("#numerossss3").attr('disabled','disabled');
+    $("#numerossss4").attr('disabled','disabled');
+    $("#numerossss1").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+            return valor;
+}
+               function cambio11111(X){
+  if(X == 1){
+      
+    $("#numerossss22").attr('disabled','disabled');
+    $("#numerossss33").attr('disabled','disabled');
+    $("#numerossss44").attr('disabled','disabled');
+    $("#numerossss55").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numerossss11").attr('disabled','disabled');
+    $("#numerossss33").attr('disabled','disabled');
+    $("#numerossss44").attr('disabled','disabled');
+    $("#numerossss55").attr('disabled','disabled');
+  }
+            if(X == 3){
+                
+    $("#numerossss22").attr('disabled','disabled');
+    $("#numerossss11").attr('disabled','disabled');
+    $("#numerossss44").attr('disabled','disabled');
+    $("#numerossss55").attr('disabled','disabled');
+  }
+            if(X == 4){
+               
+    $("#numerossss22").attr('disabled','disabled');
+    $("#numerossss33").attr('disabled','disabled');
+    $("#numerossss11").attr('disabled','disabled');
+    $("#numerossss55").attr('disabled','disabled');
+  }
+            if(X == 5){
+                
+    $("#numerossss22").attr('disabled','disabled');
+    $("#numerossss33").attr('disabled','disabled');
+    $("#numerossss44").attr('disabled','disabled');
+    $("#numerossss11").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+}
+                     function cambio22222(X){
+  if(X == 1){
+      
+    $("#numerossss222").attr('disabled','disabled');
+    $("#numerossss333").attr('disabled','disabled');
+    $("#numerossss444").attr('disabled','disabled');
+    $("#numerossss555").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numerossss111").attr('disabled','disabled');
+    $("#numerossss333").attr('disabled','disabled');
+    $("#numerossss444").attr('disabled','disabled');
+    $("#numerossss555").attr('disabled','disabled');
+  }
+            if(X == 3){
+                
+    $("#numerossss222").attr('disabled','disabled');
+    $("#numerossss111").attr('disabled','disabled');
+    $("#numerossss444").attr('disabled','disabled');
+    $("#numerossss555").attr('disabled','disabled');
+  }
+            if(X == 4){
+                
+    $("#numerossss222").attr('disabled','disabled');
+    $("#numerossss333").attr('disabled','disabled');
+    $("#numerossss111").attr('disabled','disabled');
+    $("#numerossss555").attr('disabled','disabled');
+  }
+            if(X == 5){
+               
+    $("#numerossss222").attr('disabled','disabled');
+    $("#numerossss333").attr('disabled','disabled');
+    $("#numerossss444").attr('disabled','disabled');
+    $("#numerossss111").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+}
+                        function cambio33333(X){
+  if(X == 1){
+     
+    $("#numerossss2222").attr('disabled','disabled');
+    $("#numerossss3333").attr('disabled','disabled');
+    $("#numerossss4444").attr('disabled','disabled');
+    $("#numerossss5555").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numerossss1111").attr('disabled','disabled');
+    $("#numerossss3333").attr('disabled','disabled');
+    $("#numerossss4444").attr('disabled','disabled');
+    $("#numerossss5555").attr('disabled','disabled');
+  }
+            if(X == 3){
+                
+    $("#numerossss2222").attr('disabled','disabled');
+    $("#numerossss1111").attr('disabled','disabled');
+    $("#numerossss4444").attr('disabled','disabled');
+    $("#numerossss5555").attr('disabled','disabled');
+  }
+            if(X == 4){
+                
+    $("#numerossss2222").attr('disabled','disabled');
+    $("#numerossss3333").attr('disabled','disabled');
+    $("#numerossss1111").attr('disabled','disabled');
+    $("#numerossss5555").attr('disabled','disabled');
+  }
+            if(X == 5){
+                
+    $("#numerossss2222").attr('disabled','disabled');
+    $("#numerossss3333").attr('disabled','disabled');
+    $("#numerossss4444").attr('disabled','disabled');
+    $("#numerossss1111").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+                            
+}          
+
+//::::::::::::::::::::::::::::::::::: FIN DE opcion 5:::::::::::::::::::::::::::::::::  
+//:::::::::::::::::::::::::::::::::::::::::: Opcion 6::::::::::::::::::::::::::::::::::
+
+        function cambiosssss(X){
+  if(X == 1){
+      
+    $("#numerosssss2").attr('disabled','disabled');
+    $("#numerosssss3").attr('disabled','disabled');
+    $("#numerosssss4").attr('disabled','disabled');
+    $("#numerosssss5").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numerosssss1").attr('disabled','disabled');
+    $("#numerosssss3").attr('disabled','disabled');
+    $("#numerosssss4").attr('disabled','disabled');
+    $("#numerosssss5").attr('disabled','disabled');
+  }
+            if(X == 3){
+    $("#numerosssss2").attr('disabled','disabled');
+    $("#numerosssss1").attr('disabled','disabled');
+    $("#numerosssss4").attr('disabled','disabled');
+    $("#numerosssss5").attr('disabled','disabled');
+  }
+            if(X == 4){
+    $("#numerosssss2").attr('disabled','disabled');
+    $("#numerosssss3").attr('disabled','disabled');
+    $("#numerosssss1").attr('disabled','disabled');
+    $("#numerosssss5").attr('disabled','disabled');
+  }
+            if(X == 5){
+    $("#numerosssss2").attr('disabled','disabled');
+    $("#numerosssss3").attr('disabled','disabled');
+    $("#numerosssss4").attr('disabled','disabled');
+    $("#numerosssss1").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+            return valor;
+}
+               function cambio111111(X){
+  if(X == 1){
+      
+    $("#numerosssss22").attr('disabled','disabled');
+    $("#numerosssss33").attr('disabled','disabled');
+    $("#numerosssss44").attr('disabled','disabled');
+    $("#numerosssss55").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numerosssss11").attr('disabled','disabled');
+    $("#numerosssss33").attr('disabled','disabled');
+    $("#numerosssss44").attr('disabled','disabled');
+    $("#numerosssss55").attr('disabled','disabled');
+  }
+            if(X == 3){
+                
+    $("#numerosssss22").attr('disabled','disabled');
+    $("#numerosssss11").attr('disabled','disabled');
+    $("#numerosssss44").attr('disabled','disabled');
+    $("#numerosssss55").attr('disabled','disabled');
+  }
+            if(X == 4){
+               
+    $("#numerosssss22").attr('disabled','disabled');
+    $("#numerosssss33").attr('disabled','disabled');
+    $("#numerosssss11").attr('disabled','disabled');
+    $("#numerosssss55").attr('disabled','disabled');
+  }
+            if(X == 5){
+                
+    $("#numerosssss22").attr('disabled','disabled');
+    $("#numerosssss33").attr('disabled','disabled');
+    $("#numerosssss44").attr('disabled','disabled');
+    $("#numerosssss11").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+}
+                     function cambio222222(X){
+  if(X == 1){
+      
+    $("#numerosssss222").attr('disabled','disabled');
+    $("#numerosssss333").attr('disabled','disabled');
+    $("#numerosssss444").attr('disabled','disabled');
+    $("#numerosssss555").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numerosssss111").attr('disabled','disabled');
+    $("#numerosssss333").attr('disabled','disabled');
+    $("#numerosssss444").attr('disabled','disabled');
+    $("#numerosssss555").attr('disabled','disabled');
+  }
+            if(X == 3){
+                
+    $("#numerosssss222").attr('disabled','disabled');
+    $("#numerosssss111").attr('disabled','disabled');
+    $("#numerosssss444").attr('disabled','disabled');
+    $("#numerosssss555").attr('disabled','disabled');
+  }
+            if(X == 4){
+                
+    $("#numerosssss222").attr('disabled','disabled');
+    $("#numerosssss333").attr('disabled','disabled');
+    $("#numerosssss111").attr('disabled','disabled');
+    $("#numerosssss555").attr('disabled','disabled');
+  }
+            if(X == 5){
+               
+    $("#numerosssss222").attr('disabled','disabled');
+    $("#numerosssss333").attr('disabled','disabled');
+    $("#numerosssss444").attr('disabled','disabled');
+    $("#numerosssss111").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+}
+                        function cambio333333(X){
+  if(X == 1){
+     
+    $("#numerosssss2222").attr('disabled','disabled');
+    $("#numerosssss3333").attr('disabled','disabled');
+    $("#numerosssss4444").attr('disabled','disabled');
+    $("#numerosssss5555").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numerosssss1111").attr('disabled','disabled');
+    $("#numerosssss3333").attr('disabled','disabled');
+    $("#numerosssss4444").attr('disabled','disabled');
+    $("#numerosssss5555").attr('disabled','disabled');
+  }
+            if(X == 3){
+                
+    $("#numerosssss2222").attr('disabled','disabled');
+    $("#numerosssss1111").attr('disabled','disabled');
+    $("#numerosssss4444").attr('disabled','disabled');
+    $("#numerosssss5555").attr('disabled','disabled');
+  }
+            if(X == 4){
+                
+    $("#numerosssss2222").attr('disabled','disabled');
+    $("#numerosssss3333").attr('disabled','disabled');
+    $("#numerosssss1111").attr('disabled','disabled');
+    $("#numerosssss5555").attr('disabled','disabled');
+  }
+            if(X == 5){
+                
+    $("#numerosssss2222").attr('disabled','disabled');
+    $("#numerosssss3333").attr('disabled','disabled');
+    $("#numerosssss4444").attr('disabled','disabled');
+    $("#numerosssss1111").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+                            
+}          
+
+//::::::::::::::::::::::::::::::::::: FIN DE opcion 6::::::::::::::::::::::::::::::::: 
+            //:::::::::::::::::::::::::::::::::::::::::: Opcion 7::::::::::::::::::::::::::::::::::
+
+        function cambiossssss(X){
+  if(X == 1){
+      
+    $("#numerossssss2").attr('disabled','disabled');
+    $("#numerossssss3").attr('disabled','disabled');
+    $("#numerossssss4").attr('disabled','disabled');
+    $("#numerossssss5").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numerossssss1").attr('disabled','disabled');
+    $("#numerossssss3").attr('disabled','disabled');
+    $("#numerossssss4").attr('disabled','disabled');
+    $("#numerossssss5").attr('disabled','disabled');
+  }
+            if(X == 3){
+    $("#numerossssss2").attr('disabled','disabled');
+    $("#numerossssss1").attr('disabled','disabled');
+    $("#numerossssss4").attr('disabled','disabled');
+    $("#numerossssss5").attr('disabled','disabled');
+  }
+            if(X == 4){
+    $("#numerossssss2").attr('disabled','disabled');
+    $("#numerossssss3").attr('disabled','disabled');
+    $("#numerossssss1").attr('disabled','disabled');
+    $("#numerossssss5").attr('disabled','disabled');
+  }
+            if(X == 5){
+    $("#numerossssss2").attr('disabled','disabled');
+    $("#numerossssss3").attr('disabled','disabled');
+    $("#numerossssss4").attr('disabled','disabled');
+    $("#numerossssss1").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+            return valor;
+}
+               function cambio1111111(X){
+  if(X == 1){
+      
+    $("#numerossssss22").attr('disabled','disabled');
+    $("#numerossssss33").attr('disabled','disabled');
+    $("#numerossssss44").attr('disabled','disabled');
+    $("#numerossssss55").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numerossssss11").attr('disabled','disabled');
+    $("#numerossssss33").attr('disabled','disabled');
+    $("#numerossssss44").attr('disabled','disabled');
+    $("#numerossssss55").attr('disabled','disabled');
+  }
+            if(X == 3){
+                
+    $("#numerossssss22").attr('disabled','disabled');
+    $("#numerossssss11").attr('disabled','disabled');
+    $("#numerossssss44").attr('disabled','disabled');
+    $("#numerossssss55").attr('disabled','disabled');
+  }
+            if(X == 4){
+               
+    $("#numerossssss22").attr('disabled','disabled');
+    $("#numerossssss33").attr('disabled','disabled');
+    $("#numerossssss11").attr('disabled','disabled');
+    $("#numerossssss55").attr('disabled','disabled');
+  }
+            if(X == 5){
+                
+    $("#numerossssss22").attr('disabled','disabled');
+    $("#numerossssss33").attr('disabled','disabled');
+    $("#numerossssss44").attr('disabled','disabled');
+    $("#numerossssss11").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+}
+                     function cambio2222222(X){
+  if(X == 1){
+      
+    $("#numerossssss222").attr('disabled','disabled');
+    $("#numerossssss333").attr('disabled','disabled');
+    $("#numerossssss444").attr('disabled','disabled');
+    $("#numerossssss555").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numerossssss111").attr('disabled','disabled');
+    $("#numerossssss333").attr('disabled','disabled');
+    $("#numerossssss444").attr('disabled','disabled');
+    $("#numerossssss555").attr('disabled','disabled');
+  }
+            if(X == 3){
+                
+    $("#numerossssss222").attr('disabled','disabled');
+    $("#numerossssss111").attr('disabled','disabled');
+    $("#numerossssss444").attr('disabled','disabled');
+    $("#numerossssss555").attr('disabled','disabled');
+  }
+            if(X == 4){
+                
+    $("#numerossssss222").attr('disabled','disabled');
+    $("#numerossssss333").attr('disabled','disabled');
+    $("#numerossssss111").attr('disabled','disabled');
+    $("#numerossssss555").attr('disabled','disabled');
+  }
+            if(X == 5){
+               
+    $("#numerossssss222").attr('disabled','disabled');
+    $("#numerossssss333").attr('disabled','disabled');
+    $("#numerossssss444").attr('disabled','disabled');
+    $("#numerossssss111").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+}
+                        function cambio3333333(X){
+  if(X == 1){
+     
+    $("#numerossssss2222").attr('disabled','disabled');
+    $("#numerossssss3333").attr('disabled','disabled');
+    $("#numerossssss4444").attr('disabled','disabled');
+    $("#numerossssss5555").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numerossssss1111").attr('disabled','disabled');
+    $("#numerossssss3333").attr('disabled','disabled');
+    $("#numerossssss4444").attr('disabled','disabled');
+    $("#numerossssss5555").attr('disabled','disabled');
+  }
+            if(X == 3){
+                
+    $("#numerossssss2222").attr('disabled','disabled');
+    $("#numerossssss1111").attr('disabled','disabled');
+    $("#numerossssss4444").attr('disabled','disabled');
+    $("#numerossssss5555").attr('disabled','disabled');
+  }
+            if(X == 4){
+                
+    $("#numerossssss2222").attr('disabled','disabled');
+    $("#numerossssss3333").attr('disabled','disabled');
+    $("#numerossssss1111").attr('disabled','disabled');
+    $("#numerossssss5555").attr('disabled','disabled');
+  }
+            if(X == 5){
+                
+    $("#numerossssss2222").attr('disabled','disabled');
+    $("#numerossssss3333").attr('disabled','disabled');
+    $("#numerossssss4444").attr('disabled','disabled');
+    $("#numerossssss1111").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+                            
+}          
+//:::::::::::::::::::::::: Fin opcion 7::::::::::::::::::::::::::::::::
+//:::::::::::::::::::::::::::::::::::::::::: Opcion 8::::::::::::::::::::::::::::::::::
+
+        function cambiosssssss(X){
+  if(X == 1){
+      
+    $("#numerosssssss2").attr('disabled','disabled');
+    $("#numerosssssss3").attr('disabled','disabled');
+    $("#numerosssssss4").attr('disabled','disabled');
+    $("#numerosssssss5").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numerosssssss1").attr('disabled','disabled');
+    $("#numerosssssss3").attr('disabled','disabled');
+    $("#numerosssssss4").attr('disabled','disabled');
+    $("#numerosssssss5").attr('disabled','disabled');
+  }
+            if(X == 3){
+    $("#numerosssssss2").attr('disabled','disabled');
+    $("#numerosssssss1").attr('disabled','disabled');
+    $("#numerosssssss4").attr('disabled','disabled');
+    $("#numerosssssss5").attr('disabled','disabled');
+  }
+            if(X == 4){
+    $("#numerosssssss2").attr('disabled','disabled');
+    $("#numerosssssss3").attr('disabled','disabled');
+    $("#numerosssssss1").attr('disabled','disabled');
+    $("#numerosssssss5").attr('disabled','disabled');
+  }
+            if(X == 5){
+    $("#numerosssssss2").attr('disabled','disabled');
+    $("#numerosssssss3").attr('disabled','disabled');
+    $("#numerosssssss4").attr('disabled','disabled');
+    $("#numerosssssss1").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+            return valor;
+}
+               function cambio11111111(X){
+  if(X == 1){
+      
+    $("#numerosssssss22").attr('disabled','disabled');
+    $("#numerosssssss33").attr('disabled','disabled');
+    $("#numerosssssss44").attr('disabled','disabled');
+    $("#numerosssssss55").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numerosssssss11").attr('disabled','disabled');
+    $("#numerosssssss33").attr('disabled','disabled');
+    $("#numerosssssss44").attr('disabled','disabled');
+    $("#numerosssssss55").attr('disabled','disabled');
+  }
+            if(X == 3){
+                
+    $("#numerosssssss22").attr('disabled','disabled');
+    $("#numerosssssss11").attr('disabled','disabled');
+    $("#numerosssssss44").attr('disabled','disabled');
+    $("#numerosssssss55").attr('disabled','disabled');
+  }
+            if(X == 4){
+               
+    $("#numerosssssss22").attr('disabled','disabled');
+    $("#numerosssssss33").attr('disabled','disabled');
+    $("#numerosssssss11").attr('disabled','disabled');
+    $("#numerosssssss55").attr('disabled','disabled');
+  }
+            if(X == 5){
+                
+    $("#numerosssssss22").attr('disabled','disabled');
+    $("#numerosssssss33").attr('disabled','disabled');
+    $("#numerosssssss44").attr('disabled','disabled');
+    $("#numerosssssss11").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+}
+                     function cambio22222222(X){
+  if(X == 1){
+      
+    $("#numerosssssss222").attr('disabled','disabled');
+    $("#numerosssssss333").attr('disabled','disabled');
+    $("#numerosssssss444").attr('disabled','disabled');
+    $("#numerosssssss555").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numerosssssss111").attr('disabled','disabled');
+    $("#numerosssssss333").attr('disabled','disabled');
+    $("#numerosssssss444").attr('disabled','disabled');
+    $("#numerosssssss555").attr('disabled','disabled');
+  }
+            if(X == 3){
+                
+    $("#numerosssssss222").attr('disabled','disabled');
+    $("#numerosssssss111").attr('disabled','disabled');
+    $("#numerosssssss444").attr('disabled','disabled');
+    $("#numerosssssss555").attr('disabled','disabled');
+  }
+            if(X == 4){
+                
+    $("#numerosssssss222").attr('disabled','disabled');
+    $("#numerosssssss333").attr('disabled','disabled');
+    $("#numerosssssss111").attr('disabled','disabled');
+    $("#numerosssssss555").attr('disabled','disabled');
+  }
+            if(X == 5){
+               
+    $("#numerosssssss222").attr('disabled','disabled');
+    $("#numerosssssss333").attr('disabled','disabled');
+    $("#numerosssssss444").attr('disabled','disabled');
+    $("#numerosssssss111").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+}
+                        function cambio33333333(X){
+  if(X == 1){
+     
+    $("#numerosssssss2222").attr('disabled','disabled');
+    $("#numerosssssss3333").attr('disabled','disabled');
+    $("#numerosssssss4444").attr('disabled','disabled');
+    $("#numerosssssss5555").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numerosssssss1111").attr('disabled','disabled');
+    $("#numerosssssss3333").attr('disabled','disabled');
+    $("#numerosssssss4444").attr('disabled','disabled');
+    $("#numerosssssss5555").attr('disabled','disabled');
+  }
+            if(X == 3){
+                
+    $("#numerosssssss2222").attr('disabled','disabled');
+    $("#numerosssssss1111").attr('disabled','disabled');
+    $("#numerosssssss4444").attr('disabled','disabled');
+    $("#numerosssssss5555").attr('disabled','disabled');
+  }
+            if(X == 4){
+                
+    $("#numerosssssss2222").attr('disabled','disabled');
+    $("#numerosssssss3333").attr('disabled','disabled');
+    $("#numerosssssss1111").attr('disabled','disabled');
+    $("#numerosssssss5555").attr('disabled','disabled');
+  }
+            if(X == 5){
+                
+    $("#numerosssssss2222").attr('disabled','disabled');
+    $("#numerosssssss3333").attr('disabled','disabled');
+    $("#numerosssssss4444").attr('disabled','disabled');
+    $("#numerosssssss1111").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+                            
+}          
+//:::::::::::::::::::::::: Fin opcion 8::::::::::::::::::::::::::::::::
+            //:::::::::::::::::::::::::::::::::::::::::: Opcion 9::::::::::::::::::::::::::::::::::
+
+        function cambiossssssss(X){
+  if(X == 1){
+      
+    $("#numerossssssss2").attr('disabled','disabled');
+    $("#numerossssssss3").attr('disabled','disabled');
+    $("#numerossssssss4").attr('disabled','disabled');
+    $("#numerossssssss5").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numerossssssss1").attr('disabled','disabled');
+    $("#numerossssssss3").attr('disabled','disabled');
+    $("#numerossssssss4").attr('disabled','disabled');
+    $("#numerossssssss5").attr('disabled','disabled');
+  }
+            if(X == 3){
+    $("#numerossssssss2").attr('disabled','disabled');
+    $("#numerossssssss1").attr('disabled','disabled');
+    $("#numerossssssss4").attr('disabled','disabled');
+    $("#numerossssssss5").attr('disabled','disabled');
+  }
+            if(X == 4){
+    $("#numerossssssss2").attr('disabled','disabled');
+    $("#numerossssssss3").attr('disabled','disabled');
+    $("#numerossssssss1").attr('disabled','disabled');
+    $("#numerossssssss5").attr('disabled','disabled');
+  }
+            if(X == 5){
+    $("#numerossssssss2").attr('disabled','disabled');
+    $("#numerossssssss3").attr('disabled','disabled');
+    $("#numerossssssss4").attr('disabled','disabled');
+    $("#numerossssssss1").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+            return valor;
+}
+               function cambio111111111(X){
+  if(X == 1){
+      
+    $("#numerossssssss22").attr('disabled','disabled');
+    $("#numerossssssss33").attr('disabled','disabled');
+    $("#numerossssssss44").attr('disabled','disabled');
+    $("#numerossssssss55").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numerossssssss11").attr('disabled','disabled');
+    $("#numerossssssss33").attr('disabled','disabled');
+    $("#numerossssssss44").attr('disabled','disabled');
+    $("#numerossssssss55").attr('disabled','disabled');
+  }
+            if(X == 3){
+                
+    $("#numerossssssss22").attr('disabled','disabled');
+    $("#numerossssssss11").attr('disabled','disabled');
+    $("#numerossssssss44").attr('disabled','disabled');
+    $("#numerossssssss55").attr('disabled','disabled');
+  }
+            if(X == 4){
+               
+    $("#numerossssssss22").attr('disabled','disabled');
+    $("#numerossssssss33").attr('disabled','disabled');
+    $("#numerossssssss11").attr('disabled','disabled');
+    $("#numerossssssss55").attr('disabled','disabled');
+  }
+            if(X == 5){
+                
+    $("#numerossssssss22").attr('disabled','disabled');
+    $("#numerossssssss33").attr('disabled','disabled');
+    $("#numerossssssss44").attr('disabled','disabled');
+    $("#numerossssssss11").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+}
+                     function cambio222222222(X){
+  if(X == 1){
+      
+    $("#numerossssssss222").attr('disabled','disabled');
+    $("#numerossssssss333").attr('disabled','disabled');
+    $("#numerossssssss444").attr('disabled','disabled');
+    $("#numerossssssss555").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numerossssssss111").attr('disabled','disabled');
+    $("#numerossssssss333").attr('disabled','disabled');
+    $("#numerossssssss444").attr('disabled','disabled');
+    $("#numerossssssss555").attr('disabled','disabled');
+  }
+            if(X == 3){
+                
+    $("#numerossssssss222").attr('disabled','disabled');
+    $("#numerossssssss111").attr('disabled','disabled');
+    $("#numerossssssss444").attr('disabled','disabled');
+    $("#numerossssssss555").attr('disabled','disabled');
+  }
+            if(X == 4){
+                
+    $("#numerossssssss222").attr('disabled','disabled');
+    $("#numerossssssss333").attr('disabled','disabled');
+    $("#numerossssssss111").attr('disabled','disabled');
+    $("#numerossssssss555").attr('disabled','disabled');
+  }
+            if(X == 5){
+               
+    $("#numerossssssss222").attr('disabled','disabled');
+    $("#numerossssssss333").attr('disabled','disabled');
+    $("#numerossssssss444").attr('disabled','disabled');
+    $("#numerossssssss111").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+}
+                        function cambio333333333(X){
+  if(X == 1){
+     
+    $("#numerossssssss2222").attr('disabled','disabled');
+    $("#numerossssssss3333").attr('disabled','disabled');
+    $("#numerossssssss4444").attr('disabled','disabled');
+    $("#numerossssssss5555").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numerossssssss1111").attr('disabled','disabled');
+    $("#numerossssssss3333").attr('disabled','disabled');
+    $("#numerossssssss4444").attr('disabled','disabled');
+    $("#numerossssssss5555").attr('disabled','disabled');
+  }
+            if(X == 3){
+                
+    $("#numerossssssss2222").attr('disabled','disabled');
+    $("#numerossssssss1111").attr('disabled','disabled');
+    $("#numerossssssss4444").attr('disabled','disabled');
+    $("#numerossssssss5555").attr('disabled','disabled');
+  }
+            if(X == 4){
+                
+    $("#numerossssssss2222").attr('disabled','disabled');
+    $("#numerossssssss3333").attr('disabled','disabled');
+    $("#numerossssssss1111").attr('disabled','disabled');
+    $("#numerossssssss5555").attr('disabled','disabled');
+  }
+            if(X == 5){
+                
+    $("#numerossssssss2222").attr('disabled','disabled');
+    $("#numerossssssss3333").attr('disabled','disabled');
+    $("#numerossssssss4444").attr('disabled','disabled');
+    $("#numerossssssss1111").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+                            
+}          
+//:::::::::::::::::::::::: Fin opcion 9::::::::::::::::::::::::::::::::
+                        //:::::::::::::::::::::::::::::::::::::::::: Opcion 10::::::::::::::::::::::::::::::::::
+
+        function cambiosssssssss(X){
+  if(X == 1){
+      
+    $("#numerosssssssss2").attr('disabled','disabled');
+    $("#numerosssssssss3").attr('disabled','disabled');
+    $("#numerosssssssss4").attr('disabled','disabled');
+    $("#numerossssssss5").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numerosssssssss1").attr('disabled','disabled');
+    $("#numerosssssssss3").attr('disabled','disabled');
+    $("#numerosssssssss4").attr('disabled','disabled');
+    $("#numerosssssssss5").attr('disabled','disabled');
+  }
+            if(X == 3){
+    $("#numerosssssssss2").attr('disabled','disabled');
+    $("#numerosssssssss1").attr('disabled','disabled');
+    $("#numerosssssssss4").attr('disabled','disabled');
+    $("#numerosssssssss5").attr('disabled','disabled');
+  }
+            if(X == 4){
+    $("#numerosssssssss2").attr('disabled','disabled');
+    $("#numerosssssssss3").attr('disabled','disabled');
+    $("#numerosssssssss1").attr('disabled','disabled');
+    $("#numerosssssssss5").attr('disabled','disabled');
+  }
+            if(X == 5){
+    $("#numerosssssssss2").attr('disabled','disabled');
+    $("#numerosssssssss3").attr('disabled','disabled');
+    $("#numerosssssssss4").attr('disabled','disabled');
+    $("#numerosssssssss1").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+            return valor;
+}
+               function cambio1111111111(X){
+  if(X == 1){
+      
+    $("#numerosssssssss22").attr('disabled','disabled');
+    $("#numerosssssssss33").attr('disabled','disabled');
+    $("#numerosssssssss44").attr('disabled','disabled');
+    $("#numerosssssssss55").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numerosssssssss11").attr('disabled','disabled');
+    $("#numerosssssssss33").attr('disabled','disabled');
+    $("#numerosssssssss44").attr('disabled','disabled');
+    $("#numerosssssssss55").attr('disabled','disabled');
+  }
+            if(X == 3){
+                
+    $("#numerosssssssss22").attr('disabled','disabled');
+    $("#numerosssssssss11").attr('disabled','disabled');
+    $("#numerosssssssss44").attr('disabled','disabled');
+    $("#numerosssssssss55").attr('disabled','disabled');
+  }
+            if(X == 4){
+               
+    $("#numerosssssssss22").attr('disabled','disabled');
+    $("#numerosssssssss33").attr('disabled','disabled');
+    $("#numerosssssssss11").attr('disabled','disabled');
+    $("#numerosssssssss55").attr('disabled','disabled');
+  }
+            if(X == 5){
+                
+    $("#numerosssssssss22").attr('disabled','disabled');
+    $("#numerosssssssss33").attr('disabled','disabled');
+    $("#numerosssssssss44").attr('disabled','disabled');
+    $("#numerosssssssss11").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+}
+                     function cambio2222222222(X){
+  if(X == 1){
+      
+    $("#numerosssssssss222").attr('disabled','disabled');
+    $("#numerosssssssss333").attr('disabled','disabled');
+    $("#numerosssssssss444").attr('disabled','disabled');
+    $("#numerosssssssss555").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numerosssssssss111").attr('disabled','disabled');
+    $("#numerosssssssss333").attr('disabled','disabled');
+    $("#numerosssssssss444").attr('disabled','disabled');
+    $("#numerosssssssss555").attr('disabled','disabled');
+  }
+            if(X == 3){
+                
+    $("#numerosssssssss222").attr('disabled','disabled');
+    $("#numerosssssssss111").attr('disabled','disabled');
+    $("#numerosssssssss444").attr('disabled','disabled');
+    $("#numerosssssssss555").attr('disabled','disabled');
+  }
+            if(X == 4){
+                
+    $("#numerosssssssss222").attr('disabled','disabled');
+    $("#numerosssssssss333").attr('disabled','disabled');
+    $("#numerosssssssss111").attr('disabled','disabled');
+    $("#numerosssssssss555").attr('disabled','disabled');
+  }
+            if(X == 5){
+               
+    $("#numerosssssssss222").attr('disabled','disabled');
+    $("#numerosssssssss333").attr('disabled','disabled');
+    $("#numerosssssssss444").attr('disabled','disabled');
+    $("#numerosssssssss111").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+}
+                        function cambio3333333333(X){
+  if(X == 1){
+     
+    $("#numerosssssssss2222").attr('disabled','disabled');
+    $("#numerosssssssss3333").attr('disabled','disabled');
+    $("#numerosssssssss4444").attr('disabled','disabled');
+    $("#numerosssssssss5555").attr('disabled','disabled');
+  }
+    if(X == 2){
+        
+    $("#numerosssssssss1111").attr('disabled','disabled');
+    $("#numerosssssssss3333").attr('disabled','disabled');
+    $("#numerosssssssss4444").attr('disabled','disabled');
+    $("#numerosssssssss5555").attr('disabled','disabled');
+  }
+            if(X == 3){
+                
+    $("#numerosssssssss2222").attr('disabled','disabled');
+    $("#numerosssssssss1111").attr('disabled','disabled');
+    $("#numerosssssssss4444").attr('disabled','disabled');
+    $("#numerosssssssss5555").attr('disabled','disabled');
+  }
+            if(X == 4){
+                
+    $("#numerosssssssss2222").attr('disabled','disabled');
+    $("#numerosssssssss3333").attr('disabled','disabled');
+    $("#numerosssssssss1111").attr('disabled','disabled');
+    $("#numerosssssssss5555").attr('disabled','disabled');
+  }
+            if(X == 5){
+                
+    $("#numerosssssssss2222").attr('disabled','disabled');
+    $("#numerosssssssss3333").attr('disabled','disabled');
+    $("#numerossssssss4444").attr('disabled','disabled');
+    $("#numerosssssssss1111").attr('disabled','disabled');
+  }
+            /*else{
+    $("#element_57_1").removeAttr('disabled');
+    $("#element_57_2").removeAttr('disabled');
+
+  }*/
+                            
+}          
+//:::::::::::::::::::::::: Fin opcion 10::::::::::::::::::::::::::::::::
+        </script>
+    </body>
+
+</html>
